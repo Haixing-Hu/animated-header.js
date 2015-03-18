@@ -16,7 +16,6 @@
 		changeHeaderOn = 300;
 
 	function init() {
-    console.debug("init");
 		window.addEventListener('scroll', function(event) {
 			if( !didScroll ) {
 				didScroll = true;
@@ -26,7 +25,6 @@
 	}
 
 	function scrollPage() {
-    console.debug("scrollPage");
 		var sy = scrollY();
 		if (sy >= changeHeaderOn) {
 			header.addClass('animated-header-scroll');
