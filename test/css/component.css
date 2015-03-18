@@ -1,0 +1,128 @@
+.animated-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #f6f6f6;
+	z-index: 10000;
+	height: 230px;
+	overflow: hidden;
+	-webkit-transition: height 0.3s;
+	-moz-transition: height 0.3s;
+	transition: height 0.3s;
+}
+
+.animated-header .animated-inner {
+	width: 90%;
+	max-width: 69em;
+	margin: 0 auto;
+	padding: 0 1.875em;
+}
+
+.animated-header h1,
+.animated-header nav {
+	display: inline-block;
+	position: relative;
+}
+
+ /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
+.animated-header h1,
+.animated-header nav a {
+	line-height: 230px;
+}
+
+.animated-header h1 {
+	text-transform: uppercase;
+	color: #333;
+	letter-spacing: 4px;
+	font-size: 4em;
+	margin: 0;
+	float: left;
+}
+
+.animated-header nav {
+	float: right;
+}
+
+.animated-header nav a {
+	color: #aaa;
+	font-weight: 700;
+	margin: 0 0 0 20px;
+	font-size: 1.4em;
+}
+
+.animated-header nav a:hover {
+	color: #333;
+}
+
+/* Transitions and class for reduced height */
+.animated-header h1,
+.animated-header nav a {
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.animated-header.animated-header-scroll {
+	height: 90px;
+}
+
+.animated-header.animated-header-scroll h1,
+.animated-header.animated-header-scroll nav a {
+	line-height: 90px;
+}
+
+.animated-header.animated-header-scroll h1 {
+	font-size: 2em;
+}
+
+/* Example Media Queries */
+@media screen and (max-width: 55em) {
+
+	.animated-header .animated-inner {
+		width: 100%;
+	}
+
+	.animated-header h1,
+	.animated-header nav {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		float: none;
+	}
+
+	.animated-header h1,
+	.animated-header nav a {
+		line-height: 115px;
+	}
+
+	.animated-header nav a {
+		margin: 0 10px;
+	}
+
+	.animated-header.animated-header-scroll h1,
+	.animated-header.animated-header-scroll nav a {
+		line-height: 45px;
+	}
+
+	.animated-header.animated-header-scroll h1 {
+		font-size: 2em;
+	}
+
+	.animated-header.animated-header-scroll nav a {
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 32.25em) {
+	.animated-header nav a {
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 24em) {
+	.animated-header nav a,
+	.animated-header.animated-header-scroll nav a {
+		line-height: 1;
+	}
+}
